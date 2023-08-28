@@ -35,8 +35,10 @@ distances_A = []
 for order in total_orders:
     dist_A = distance(order['A'], point_drive['A'])
     distances_A.append(dist_A)
-print(distances_A)
-count = int(input('Сколько заказов вы хотите взять с собой? '))
+
+print("Тестовые данные для проверки:", distances_A )
+
+count = int(input('Сколько заказов вы хотите взять? '))
 
 indexes = sorted(range(len(distances_A)), key=lambda k: distances_A[k])[:count]
 selected_orders = [total_orders[i] for i in indexes]
